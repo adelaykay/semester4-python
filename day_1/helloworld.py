@@ -1,6 +1,7 @@
 import math
 
 # Arithmetic Operations
+
 print(3+4) # Addition (7)
 
 print(3-4) # Subtraction (-1)
@@ -51,7 +52,7 @@ print('isDefined: ', isDefined)
 cars = ['citroen', 'audi', 'mercedes', 'bmw', 'peugeot']
 print('cars: ', cars)
 # Tuple
-trinity = ['father', 'son', 'holy spirit']
+trinity = ('father', 'son', 'holy spirit')
 for person in trinity:
   print('God the ', person)
 # Set
@@ -74,5 +75,6 @@ print(pairs.get(12))
 # 2
 p = (2,3)
 q = (10, 8)
-eucl = math.dist(p, q)
+# eucl = math.dist(p, q)
+eucl = (((p[0] - q[0]) ** 2) + ((p[1] - q[1]) ** 2)) ** 0.5
 print('Euclidian distance between points (2,3) and (10,8) is: ', eucl)
