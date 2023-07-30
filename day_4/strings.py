@@ -2,12 +2,15 @@
 
 # 1
 string = 'Fifteen' + 'Days' + 'Of' + 'Smiling'
+print(f'1. {string}')
 
 # 2
 string2 = 'Coding' + 'For' + 'All'
+print(f'2. {string2}')
 
 # 3
 company = string2
+print(f'3. {company}')
 
 # 4
 print(f'4. {company}')
@@ -84,3 +87,39 @@ print(f'25. {phrase.replace("because ", "")}')
 
 # 26
 print(f'26. {"You cannot end a sentence with because because because is a conjunction".index("because")}')
+
+# 27
+sentence = "You cannot end a sentence with because because because is a conjunction"
+print(f'27. {sentence[:sentence.find("because")] + sentence[sentence.find(" is"):]}')
+
+# 28
+print(f'28. {"Coding For All".startswith("Coding")}')
+
+# 29
+print(f'29. {"Coding For All".endswith("Coding")}')
+
+# 30
+print(f'30. {"   Coding For All   ".strip()}')
+
+# 31
+print(f'31. {"Fifteendaysofsmiling".isidentifier()}') # True
+print(f'31. {"Fifteen_days_of_smiling".isidentifier()}') # False
+
+# 32
+libs = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+print(f'32. {"# ".join(libs)}')
+
+# 33
+print(f'33. I am enjoyning this challenge\n    I just wonder what is next')
+
+# 34
+print(f'34. Name\tAge\tCountry\t\tCity\n    Omoefe\t250\tNigeria\t\tLagos')
+
+# 35
+radius = 10
+area = 3.14 * radius**2
+
+print(f'35. The area of a circle with radius {radius} is {area} meters squared')
+
+# 36
+print(f'36. 8 + 6 = {8+6}\n    8 - 6 = {8 - 6}\n    8 * 6 = {8 * 6}\n    8 / 6 = {(8 / 6):.2f}\n    8 % 6 = {8 % 6}\n    8 // 6 = {8 // 6}\n    8 ** 6 = {8 ** 6}\n')
