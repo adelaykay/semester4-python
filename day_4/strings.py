@@ -59,6 +59,8 @@ print(f'16. {"Coding For All".rfind("l")}')
 print(f'17. {"Coding For All"[10]}')
 
 # 18
+name = 'Python For Everyone'
+split_name = name.split(' ')
 print(f'18.\t{"Python For Everyone"}')
 #----------------------------------------------------------------
 
@@ -82,8 +84,8 @@ print(f'24. {"You cannot end a sentence with because because is a conjunction".r
 
 # 25
 phrase = "You cannot end a sentence with because because because is a conjunction"
-phrase.strip('because')
-print(f'25. {phrase.replace("because ", "")}')
+# print(f'25. {phrase.replace("because because because", "")}')
+print(f'25. {phrase}')
 
 # 26
 print(f'26. {"You cannot end a sentence with because because because is a conjunction".index("because")}')
