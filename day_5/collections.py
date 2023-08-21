@@ -12,3 +12,5 @@ fruits2 = [*fruits]
 
 # print(fruits, copy_of_fruits == fruits)
 print(fruits == fruits2)
+
+
