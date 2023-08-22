@@ -63,22 +63,51 @@ print(f'15. {"Google" in it_companies}')
 
 # 16
 it_companies.sort()
-print(f'16. IT companies {it_companies}')
+print(f'16. IT companies: {it_companies}')
+
+# 17
+it_companies.reverse()
+print(f'17. IT companies: {it_companies}')
+
+# 18
+sliceFirstThree = it_companies[0:3]
+print(f'18. slice: {sliceFirstThree}')
+
+# 19
+sliceLastThree = it_companies[-3:]
+print(f'19. slice: {sliceLastThree}')
+
+# 20
+sliceMiddle = it_companies[len(it_companies)//2]
+print(f'20. slice: {sliceMiddle}')
+
+# 21
+it_companies.pop(0)
+print(f'21. it_companies: {it_companies}')
+
+# 22
+it_companies.pop(len(it_companies)//2)
+print(f'22. it_companies: {it_companies}')
+
+# 23
+it_companies.pop()
+print(f'23. it_companies: {it_companies}')
+
+# 24
+it_companies.clear()
+print(f'24. it_companies: {it_companies}')
+
+# 25
 
 
+# 26 27
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node', 'Express', 'MongoDB']
+joinedList = front_end + back_end
+print(f'27. Frontend + Backend: {joinedList}')
 
-#=======
-fruits=['apple', 'orange', 'mango', 'apple', 'orange', 'mango']
-# fruits.append('grape')
-# fruits.insert(2, 'grape')
-# fruits.remove('banana')
-# fruits.pop()
-# del fruits[0:2]
-# fruits.clear()
-# fruits.reverse()
-# fruits.sort()
-copy_of_fruits = fruits.copy()
-fruits2 = [*fruits]
+# 28
+full_stack = joinedList.copy()
+full_stack.insert(5, ['Python', 'SQL'])
+print(f'28. Full Stack: {full_stack}')
 
-# print(fruits, copy_of_fruits == fruits)
-print(fruits == fruits2)
