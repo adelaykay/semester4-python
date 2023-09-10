@@ -100,4 +100,4 @@ person = {
 }
 
 if 'skills' in person:
-    print(f'{person['skills'])
+    print(f'{person["skills"]}')
