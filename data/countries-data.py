@@ -2623,11 +2623,11 @@ countries_data = [
 
 # 3
 # i
-languages = set()
-for country in countries_data:
-    for language in country['languages']:
-        languages.add(language)
-print(f'3.i. Total number of languages = {len(languages)}')
+# languages = set()
+# for country in countries_data:
+#     for language in country['languages']:
+#         languages.add(language)
+# print(f'3.i. Total number of languages = {len(languages)}')
 
 # ii
 languages, count = {}, 1
@@ -2637,6 +2637,7 @@ for country in countries_data:
             languages[language] = count
         elif language in languages:
             languages[language] += 1
+print(languages.items())
 lst = sorted(languages.values(), reverse=True)
 print(lst)
 for k, v in languages.items():

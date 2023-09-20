@@ -86,7 +86,7 @@ m2 = p2[1] - p1[1] / p2[0] - p1[0]
 ed = ((p2[0] - p1[0]) ** 2 + (p2[1] - p1[1]) ** 2) ** 0.5
 print(f'9. The slope is {m2:.2f} and the euclidian distance is {ed:.2f}\n')
 print('_______________________________________________')
-
+round()
 # 10
 # Compare the slopes in tasks 8 and 9
 print(f'10. {m1 > m2}\n')

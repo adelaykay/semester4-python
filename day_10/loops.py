@@ -2914,16 +2914,16 @@ countries_data = [
 
 # Exercises Level 3
 # 1
-print('1.', end=' ')
-for country in countries:
-    if 'land' in country:
-        print(country, sep=', ', end=' ')
-print()
+# print('1.', end=' ')
+# for country in countries:
+#     if 'land' in country:
+#         print(country, sep=', ', end=' ')
+# print()
 
 # 2
-fruits = ['banana', 'orange', 'mango', 'lemon']
-fruits.reverse()
-print(f'2. {fruits}')
+# fruits = ['banana', 'orange', 'mango', 'lemon']
+# fruits.reverse()
+# print(f'2. {fruits}')
 
 # 3
 # i
@@ -2942,35 +2942,35 @@ print(f'2. {fruits}')
 #         elif language in languages:
 #             languages[language] += 1
 # lst = sorted(languages.values(), reverse=True)
-# print(lst)
+# print(languages.items())
 # for k, v in languages.items():
 #     for i in range(10):
 #         if v == lst[i]:
 #             print(f'{k} - {v}')
 
 # ii alternate method
-# languages = []
-# for country in countries_data:
-#     for language in country['languages']:
-#         # print(language)
-#         languages.append(language)
+languages = []
+for country in countries_data:
+    for language in country['languages']:
+        # print(language)
+        languages.append(language)
 
-# languages.sort()
-# idx, count, solution = 1, 0, {}
-# while idx < len(languages):
-#     if languages[idx - 1] == languages[idx]:
-#         count += 1
-#     else:
-#         # if count > (solution.values())[0]:
-#         solution[count] = languages[idx - 1]
-#         count = 1
-#     idx += 1
-# lst = sorted(solution)
-# print(lst)
-# for k, v in solution.items():
-#     for i in range(-1, -10, -1):
-#         if k == lst[i]:
-#             print(f'{k} - {v}')
+languages.sort()
+idx, count, solution = 1, 0, {}
+while idx < len(languages):
+    if languages[idx - 1] == languages[idx]:
+        count += 1
+    else:
+        # if count > (solution.values())[0]:
+        solution[count] = languages[idx - 1]
+        count = 1
+    idx += 1
+lst = sorted(solution)
+print(lst)
+for k, v in solution.items():
+    for i in range(-1, -10, -1):
+        if k == lst[i]:
+            print(f'{k} - {v}')
 
 # iii
 # population_data = {}

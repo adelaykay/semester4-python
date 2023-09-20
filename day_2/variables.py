@@ -55,7 +55,7 @@ radius = float(input('Enter radius: '))
 area_of_circle = pi * (radius ** 2)
 circum_of_circle = 2 * pi * radius
 # ----------------------------------------------------------------
-print('Area of circle: ' , area_of_circle)
+print('Area of circle: ', area_of_circle)
 
 # ----------------------------------------------------------------
 
