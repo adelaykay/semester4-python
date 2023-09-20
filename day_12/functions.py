@@ -98,10 +98,11 @@ def list_of_rgb_colors(num):
 
 
 # 3.	Write a function generate_colors which can generate any number of hexa or rgb colors.
-def generate_colors(type, num):
-    if type == 'rgb':
+def generate_colors(color_format, num):
+    """Generates the given number of hexa or rgb colors"""
+    if color_format == 'rgb':
         print(list_of_rgb_colors(num))
-    elif type == 'hexa':
+    elif color_format == 'hexa':
         print(list_of_hexa_colors(num))
 
 
@@ -114,6 +115,7 @@ def generate_colors(type, num):
 # Exercises: Level 3
 # 1.	Call your function shuffle_list, it takes a list as a parameter, and it returns a shuffled list
 def shuffle_list(*lst):
+    """Shuffle a list"""
     return random.sample(lst, len(lst))
 
 
@@ -122,6 +124,7 @@ def shuffle_list(*lst):
 
 # 2.	Write a function which returns an array of seven random numbers in a range of 0-9. All the numbers must be unique.
 def unique_random_numbers():
+    """Generates an array of seven random single digit numbers"""
     numbers = list(range(10))
     unique_numbers = random.sample(numbers, 7)
     return unique_numbers
