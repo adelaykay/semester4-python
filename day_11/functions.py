@@ -177,49 +177,57 @@
 
 
 # 3
-def calculate_mean(*nums):
+def calculate_mean(nums):
     ''' returns the mean of numbers in argument nums '''
     return sum(nums) / len(nums)
 
 
-# def calculate_median(*nums):
-#     ''' returns the median of numbers in argument nums '''
-#     s_nums = sorted(nums)
-#     if len(s_nums) % 2 == 1:
-#         return s_nums[len(nums) // 2]
-#     else:
-#         return (s_nums[(len(nums) - 1) // 2] + s_nums[len(nums) / 2]) / 2
+def calculate_median(nums):
+    ''' returns the median of numbers in argument nums '''
+    s_nums = sorted(nums)
+    if len(s_nums) % 2 == 1:
+        return s_nums[len(nums) // 2]
+    else:
+        return (s_nums[(len(nums) - 1) // 2] + s_nums[len(nums) / 2]) / 2
 
 
-# def calculate_mode(*nums):
-#     ''' returns the mode of numbers in argument nums '''
-#     count, mode_count, mode_num = 1, 1, nums[0]
-#     for i in range(1, len(nums)):
-#         if nums[i] == nums[i - 1]:
-#             count += 1
-#         elif count > mode_count:
-#             mode_count = count
-#             mode_num = nums[i - 1]
-#             count = 1
-#         elif count <= mode_count:
-#             count = 1
-#     return mode_num
+def calculate_mode(nums):
+    ''' returns the mode of numbers in argument nums '''
+    count, mode_count, mode_num = 1, 1, nums[0]
+    for i in range(1, len(nums)):
+        if nums[i] == nums[i - 1]:
+            count += 1
+        elif count > mode_count:
+            mode_count = count
+            mode_num = nums[i - 1]
+            count = 1
+        elif count <= mode_count:
+            count = 1
+    return mode_num
 
 
-# def calculate_range(*nums):
-#     ''' returns the range of numbers in argument nums '''
-#     s_nums = sorted(nums)
-#     range_of_nums = s_nums[0] - s_nums[-1]
-#     return range_of_nums
+def calculate_range(nums):
+    ''' returns the range of numbers in argument nums '''
+    s_nums = sorted(nums)
+    range_of_nums = s_nums[0] - s_nums[-1]
+    return range_of_nums
 
-def calclulate_variance(*nums):
+
+def calclulate_variance(nums):
     """Calculates the variance of numbers in argument nums"""
     mean = calculate_mean(nums)
-    squared_diff = [(num - mean) ** 2 for num in nums]
+    squared_diff = []
+    for num in nums:
+        squared_diff.append((num - mean)**2)
     return sum(squared_diff) / len(nums)
 
-# numbers = [1, 2, 3, 4, 5, 6, 7, 8]
-# print(f'3. Mean = {calculate_mean(numbers)}')
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+print(f'3. Mean = {calculate_mean(numbers)}')
+print(f'   Median = {calculate_median(numbers)}')
+print(f'   Mode = {calculate_mode(numbers)}')
+print(f'   Range = {calculate_range(numbers)}')
+print(f'   Variance = {calculate_variance(numbers)}')
 
 # Level 3
 

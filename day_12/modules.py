@@ -51,7 +51,7 @@ def user_id_gen_by_user():
 # # rgb(125,244,255) - the output should be in this form
 def color_gen():
     """ Generates a random color """
-    return random.randint(0,255)
+    return random.randint(0, 255)
 
 
 def rgb_color_gen():
