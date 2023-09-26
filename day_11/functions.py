@@ -213,8 +213,10 @@ def calculate_mean(*nums):
 #     return range_of_nums
 
 def calclulate_variance(*nums):
+    """Calculates the variance of numbers in argument nums"""
     mean = calculate_mean(nums)
-    squared_diff = [(num - mean) ** 2 for num in nums)]
+    squared_diff = [(num - mean) ** 2 for num in nums]
+    return sum(squared_diff) / len(nums)
 
 # numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 # print(f'3. Mean = {calculate_mean(numbers)}')
@@ -2887,14 +2889,22 @@ countries_data = [
 ]
 
 
-def most_spoken_languages():
-    ''' Returns the most spoken language in the world '''
-    all_languages = [language for language in (country for country
-        in countries_data)]
-    print(all_languages)
+# def most_spoken_languages():
+#     ''' Returns the most spoken languages in the world '''
+#     all_languages = [language for country in countries_data for key, value in country.items() if 'languages' in key for language in value]
+
+#     language_count = [[language, all_languages.count(language)] for language in set(all_languages)]
+
+#     for i in range(len(language_count)):
+#         for j in range(0, len(language_count)):
+#             if language_count[j][1] < language_count[i][1]:
+#                 language_count[i], language_count[j] = language_count[j], language_count[i]
+
+#     return [f'{language[0]} - {language[1]}' for i, language in enumerate(language_count) if i < 10]
 
 
-most_spoken_languages()
+# print(most_spoken_languages())
+
 
 # def capitalize(*lst):
 #     ''' capitalize items in a list'''

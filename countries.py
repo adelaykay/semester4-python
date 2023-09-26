@@ -192,4 +192,22 @@ countries = [
   'Yemen',
   'Zambia',
   'Zimbabwe',
-];
+]
+
+
+def common_chars(s1, s2):
+    """Returns the number of common characters"""
+    count_s1, count_s2 = [0] * 26, [0] * 26
+
+    for i in range(len(s1)):
+        count_s1[ord(s1[i]) - ord('a')] += 1
+        count_s2[ord(s2[i]) - ord('a')] += 1
+
+    common_count = 0
+    for i in range(26):
+        common_count += min(count_s1[i], count_s2[i])
+
+    return common_count
+
+
+print(common_chars('zzzz', 'zzzzzzz'))
