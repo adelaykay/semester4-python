@@ -6,7 +6,6 @@
 # For each i from 0 to n - 1, b[i] = a[i - 1] + a[i] + a[i + 1].
 # If some element in the sum a[i - 1] + a[i] + a[i + 1] does not exist, it should be set to 0. For example, b[0] should be equal to 0 + a[0] + a[1].
 # Example
-
 # For n = 5 and a = [4, 0, 1, -2, 3], the output should be solution(n, a) = [4, 5, -1, 2, 1].
 
 # b[0] = 0 + a[0] + a[1] = 0 + 4 + 0 = 4
@@ -187,4 +186,46 @@ def unique_splt(*nums):
             return []
     return solution
 
-print(unique_splt(2,2,3,3,2,2))
+
+print(unique_splt(2, 2, 3, 3, 2, 2))
+
+
+########################################################################
+########################################################################
+# matriix = [[1, 2, 3],
+#      [4, 5, 6],
+#      [7, 8, 9]]
+
+
+# def solution(a):
+#     """ Rotate a 2 dimensional array of numbers by 90 degrees clockwise """
+#     a.reverse()
+#     for i in range(len(a)):
+#         for j in range(i):
+#             a[i][j], a[j][i] = a[j][i], a[i][j]
+
+#     print(a)
+
+
+# solution(matriix)
+
+
+grid = [['.', '.', '.', '.', '2', '.', '.', '9', '.'],
+        ['.', '.', '.', '.', '6', '.', '.', '.', '.'],
+        ['7', '1', '.', '.', '7', '5', '.', '.', '.'],
+        ['.', '7', '.', '.', '.', '.', '.', '.', '.'],
+        ['.', '.', '.', '.', '8', '3', '.', '.', '.'],
+        ['.', '.', '8', '.', '.', '7', '.', '6', '.'],
+        ['.', '.', '.', '.', '.', '2', '.', '.', '.'],
+        ['.', '1', '.', '2', '.', '.', '.', '.', '.'],
+        ['.', '2', '.', '.', '3', '.', '.', '.', '.']]
+
+
+def solution(grid):
+    for i, list_of_nums in enumerate(grid):
+        for j, num in enumerate(list_of_nums):
+            if ord(num) > 46 and list_of_nums.count(num) > 1:
+                print(num)
+
+
+print(solution(grid))
